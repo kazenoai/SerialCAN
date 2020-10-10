@@ -1,0 +1,21 @@
+15:32:11 **** Incremental Build of configuration Debug for project Lib ****
+make -j8 all 
+arm-none-eabi-gcc "C:/Users/kazen/Documents/project/2020_10_03_SerlCan/code/SerialCAN/src/SerlCan.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I"C:/Users/kazen/Documents/project/2020_10_03_SerlCan/code/SerialCAN/tools/local/stm32_cube/../../../include" -I"C:/Users/kazen/Documents/project/2020_10_03_SerlCan/code/SerialCAN/tools/local/stm32_cube/../include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/SerlCan.d" -MT"src/SerlCan.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/SerlCan.o"
+arm-none-eabi-gcc "C:/Users/kazen/Documents/project/2020_10_03_SerlCan/code/SerialCAN/tools/local/src/SerlCan_Intrpt.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I"C:/Users/kazen/Documents/project/2020_10_03_SerlCan/code/SerialCAN/tools/local/stm32_cube/../../../include" -I"C:/Users/kazen/Documents/project/2020_10_03_SerlCan/code/SerialCAN/tools/local/stm32_cube/../include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"local_src/SerlCan_Intrpt.d" -MT"local_src/SerlCan_Intrpt.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "local_src/SerlCan_Intrpt.o"
+arm-none-eabi-gcc -o "Lib.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\kazen\Documents\project\2020_10_03_SerlCan\code\SerialCAN\tools\local\stm32_cube\Lib\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lib.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lib.elf
+ 
+arm-none-eabi-objdump -h -S  Lib.elf  > "Lib.list"
+arm-none-eabi-objcopy  -O binary  Lib.elf  "Lib.bin"
+arm-none-eabi-size   Lib.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     20	   4268	  15252	   3b94	Lib.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lib.bin
+ 
+Finished building: Lib.list
+ 
+
+15:32:12 Build Finished. 0 errors, 0 warnings. (took 1s.691ms)
+
